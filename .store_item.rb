@@ -8,6 +8,7 @@
 
 
 class Item
+  attr_reader :itemname, :color, :price
   def initialize(input_item_name, input_color, input_price)
     @itemname = input_item_name
     @color = input_color
@@ -20,18 +21,6 @@ class Item
 
   def price_increase
     @price = 1.1 * @price
-  end
-
-  def itemname
-    @itemname
-  end
-
-  def color
-    @color
-  end
-
-  def price
-    @price
   end
 end
 
