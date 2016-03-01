@@ -9,10 +9,10 @@
 
 class Item
   attr_reader :itemname, :color, :price
-  def initialize(input_item_name, input_color, input_price)
-    @itemname = input_item_name
-    @color = input_color
-    @price = input_price
+  def initialize(input_options)
+    @itemname = input_options[:item_name]
+    @color = input_options[:color]
+    @price = input_options[:price]
   end
 
   def print_info
@@ -24,9 +24,9 @@ class Item
   end
 end
 
-item1 = Item.new("nerf gun", "red", 30.00)
-item2 = Item.new("super soaker", "blue", 25.00)
-item3 = Item.new("laser sword", "green", 20.00)
+item1 = Item.new(price: 30.00, item_name: "nerf gun", color: "red")
+item2 = Item.new(color: "blue", price: 25.00, item_name: "super soaker")
+item3 = Item.new(color: "green", item_name: "laser sword", price: 20.00)
 
 item1.print_info
 item2.print_info
