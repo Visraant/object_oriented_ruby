@@ -28,3 +28,9 @@ class Car < Vehicle
     puts "Beeeeeeep!"
   end
 end
+
+bike = Bike.new
+car = Car.new
+
+puts car.brake
+puts bike.accelerate
