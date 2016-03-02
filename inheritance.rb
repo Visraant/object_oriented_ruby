@@ -3,7 +3,7 @@ class Vehicle
     @speed = 0
     @direction = 'north'
   end
-
+  
   def brake
     @speed = 0
   end
@@ -15,6 +15,7 @@ class Vehicle
   def turn(new_direction)
     @direction = new_direction
   end
+end
 
 class Bike < Vehicle
   def ring_bell
