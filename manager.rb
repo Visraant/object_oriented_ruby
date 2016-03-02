@@ -1,5 +1,7 @@
 class Employee
   attr_reader :first_name, :last_name, :active
+  attr_writer :active
+  attr_accessor :salary
 
   def initialize(input_options)
     @first_name = input_options[:first_name]
@@ -19,7 +21,6 @@ class Employee
   def fire_employee
     @active = false
   end
-
 end
 
 class Manager < Employee
