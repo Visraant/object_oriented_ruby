@@ -19,12 +19,26 @@ class Vehicle
 end
 
 class Bike < Vehicle
+  def initialize
+    super
+    @speed = "six"
+    @weight = 30
+    @type = "Huffy"
+  end
+  
   def ring_bell
     puts "Ring ring!"
   end
 end
 
 class Car < Vehicle
+  def initialize
+    super
+    @miles = 300
+    @year = 2015
+    @make = "Ford Focus"
+  end
+  
   def honk_horn
     puts "Beeeeeeep!"
   end
@@ -33,7 +47,4 @@ end
 bike = Bike.new
 car = Car.new
 
-car.accelerate
-p car.speed
-car.brake
-p car.speed
+p car
