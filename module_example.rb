@@ -2,7 +2,7 @@ module Driveable
   def brake
     @speed = 0
   end
-
+  
   def accelerate
     @speed += 10
   end
